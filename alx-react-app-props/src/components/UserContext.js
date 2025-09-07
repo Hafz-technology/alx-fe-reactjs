@@ -1,4 +1,7 @@
 import React from 'react';
 
 // Create a new context for user data
-export const UserContext = React.createContext(null);
+const UserContext = React.createContext(null);
+
+export default UserContext;
+export { UserContext };
