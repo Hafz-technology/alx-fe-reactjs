@@ -3,7 +3,7 @@ import useRecipeStore from './recipeStore';
 
 const RecipeDetails = ({ recipeId, onGoBack, onEdit, onDelete }) => {
   const recipes = useRecipeStore(state => state.recipes);
-  const recipe = recipes.find(r => r.id === recipeId);
+  const recipe = recipes.find(recipe => recipe.id === recipeId);
 
   if (!recipe) {
     return (
