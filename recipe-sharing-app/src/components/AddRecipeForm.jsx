@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useRecipeStore from './recipeStore';
+import { useRecipeStore } from './recipeStore';
 
 const AddRecipeForm = () => {
   const addRecipe = useRecipeStore(state => state.addRecipe);
@@ -13,11 +13,22 @@ const AddRecipeForm = () => {
     setTitle('');
     setDescription('');
   };
+const formStyle = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  padding: '1rem',
+  backgroundColor: '#AAA',
+  gap: '20px'
+
+}
+
+
+
 
   return (
     <form onSubmit={handleSubmit} className="mb-8 p-4 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-4 text-gray-800">Add New Recipe</h2>
-      <div className="flex flex-col space-y-4">
+      <div style= {formStyle} className="flex flex-col space-y-4">
         <input
           type="text"
           value={title}
