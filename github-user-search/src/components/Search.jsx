@@ -62,7 +62,7 @@ export const Search = () => {
 
 
 
-
+// ["avatar_url", "login", "Looks like we cant find the user", "img"]
 
   // const [input, setInput] = useState("");
 //   const fetchData = (value) => {
