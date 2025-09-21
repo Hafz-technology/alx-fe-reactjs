@@ -1,3 +1,8 @@
+@import "tailwindcss";
+
+
+
+
 .App {
   background-color: #eee;
   height: 100vh;
