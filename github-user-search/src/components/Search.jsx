@@ -4,11 +4,20 @@ import './Search.css';
 export const Search = ({setResults}) => {
   const [input, setInput] = useState("");
   const fetchData = (value) => {
-    fetch("https://api.github.com/users/Hafz-technology")
+    // fetch("https://api.github.com/users/Hafz-technology")    
+    fetch("https://jsonplaceholder.typicode.com/users")    
+
     .then((Response) => Response.json())
     .then(json => {
-      const results = json.
-      console.log(results);
+      const results = json.filter((user) => {
+        return (
+          value &&
+          user &&
+          user.name &&
+          user.name.toLowerCase().includes(value)
+        )
+      })
+      
       setResults(results);
     }) ; 
   } 
