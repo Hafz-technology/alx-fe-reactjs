@@ -2,6 +2,13 @@ import { useState } from "react";
 import {FaSearch } from "react-icons/fa";
 import './Search.css'; 
 import axios from 'axios';
+import { fetchUserData } from "../services/githubService";
+
+
+
+
+
+
 export const Search = () => {
   const [username, setUsername] = useState('');
   const [userData, setUserData] = useState(null);
