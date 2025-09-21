@@ -43,3 +43,4 @@ export const fetchUserData = ({setResults}) => {
 };
 
 
+// ["https://api.github.com/search/users?q", "location", "minRepos"]
