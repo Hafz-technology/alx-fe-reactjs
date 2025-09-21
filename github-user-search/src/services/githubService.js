@@ -3,7 +3,7 @@ import {FaSearch } from "react-icons/fa";
 import './Search.css'; 
 import axios from 'axios';
 
-export const Search = ({setResults}) => {
+export const fetchUserData = ({setResults}) => {
   const [input, setInput] = useState("");
   const fetchData = (value) => {
     // fetch("https://api.github.com/users/Hafz-technology")    
