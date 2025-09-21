@@ -12,8 +12,7 @@ function App() {
     <>
       <div className="App">
         <div className="search-bar-container">
-              {/* <Search setResults={setResults}/> */}
-              <Search />
+              <Search setResults={setResults}/>
             <SearchResultsList results={results}/>
 
         </div>
