@@ -67,7 +67,7 @@ export const Search = () => {
 
 
 
-
+// search.map()
 
 // ["avatar_url", "login", "Looks like we cant find the user", "img"]
 
