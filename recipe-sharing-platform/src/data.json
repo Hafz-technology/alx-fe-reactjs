@@ -1,14 +1,69 @@
 [
   {
     "id": 1,
-    "title": "Spaghetti Carbonara",
-    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/150"
+    "title": "Spaghetti Carbonara 🍝",
+    "summary": "A classic Italian pasta dish with eggs, cheese, pancetta, and black pepper. Simple, creamy, and quick!",
+    "image": "https://images.unsplash.com/photo-1598103442111-9e563b7e4242?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyYm9uYXJhfGVufDB8fDB8fHww",
+    "prepTime": "10 minutes",
+    "cookTime": "15 minutes",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta or guanciale",
+      "2 large eggs",
+      "50g Pecorino Romano cheese, grated",
+      "Black pepper, freshly ground"
+    ],
+    "instructions": [
+      "Cook spaghetti according to package directions.",
+      "While pasta cooks, cook the pancetta in a skillet until crisp. Remove from heat.",
+      "In a bowl, whisk eggs, grated cheese, and a generous amount of black pepper.",
+      "Drain pasta, reserving some pasta water. Quickly toss hot pasta with pancetta and the egg mixture. The heat from the pasta will cook the eggs.",
+      "Add a splash of reserved pasta water if the sauce is too thick. Serve immediately with extra cheese and pepper."
+    ]
   },
   {
     "id": 2,
-    "title": "Chicken Tikka Masala",
-    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/150"
+    "title": "Chicken Tikka Masala 🍗",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth, buttery & creamy tomato-based gravy. A British-Indian favorite.",
+    "image": "https://images.unsplash.com/photo-1589302168068-96d5423871ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGlra2ElMjBtYXNhbGF8ZW58MHx8MHx8fDA%3D",
+    "prepTime": "20 minutes",
+    "cookTime": "45 minutes",
+    "ingredients": [
+      "1 kg chicken breast, cubed",
+      "2 tbsp plain yogurt",
+      "2 tsp tandoori masala powder",
+      "1 can (400g) crushed tomatoes",
+      "200ml heavy cream"
+    ],
+    "instructions": [
+      "Marinate chicken with yogurt and tandoori masala for at least 30 minutes.",
+      "Grill or pan-fry the chicken until cooked through.",
+      "In a separate pot, simmer crushed tomatoes with your preferred spices (ginger, garlic, garam masala).",
+      "Stir in the heavy cream and marinated chicken. Simmer for 15 minutes.",
+      "Serve hot with basmati rice or naan bread."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Vegan Lentil Soup 🥣",
+    "summary": "A hearty and nutritious soup made with red lentils, vegetables, and aromatic spices. Perfect for a chilly evening.",
+    "image": "https://images.unsplash.com/photo-1547595632-601e85906809?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGxudGlsJTIwc291cHxlbnwwfHwwfHx8MA%3D%3D",
+    "prepTime": "15 minutes",
+    "cookTime": "30 minutes",
+    "ingredients": [
+      "1 cup red lentils, rinsed",
+      "1 large carrot, diced",
+      "1 celery stalk, diced",
+      "1 onion, chopped",
+      "6 cups vegetable broth",
+      "1 tsp cumin"
+    ],
+    "instructions": [
+      "Sauté onion, carrot, and celery in a large pot until softened.",
+      "Stir in the lentils and cumin.",
+      "Pour in the vegetable broth and bring to a boil.",
+      "Reduce heat and simmer, covered, for 25-30 minutes, or until lentils are tender.",
+      "Season with salt and pepper. Blend partially with an immersion blender for a creamier texture if desired."
+    ]
   }
 ]
