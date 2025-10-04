@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import mockRecipes from '../data.json'; 
+import { Link } from 'react-router-dom';
 // import { useParams, Link } from 'react-router-dom';
 
 const HomePage = () => {
@@ -54,6 +55,35 @@ const HomePage = () => {
         <p className="mt-3 text-xl text-gray-600">
           Discover your next favorite meal from our community's best recipes.
         </p>
+
+   
+      
+        {/* ADD RECIPE BUTTON / LINK */}
+        <Link
+          to="/add" // This links to the AddRecipeForm component
+          className="
+            inline-block bg-green-600 text-white font-semibold py-3 px-8 rounded-lg 
+            shadow-lg hover:bg-green-700 transition duration-200 ease-in-out 
+            transform hover:scale-105 text-lg
+          "
+        >
+          Share Your Recipe
+        </Link>
+        {/* END ADD RECIPE BUTTON */}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
       </header>
 
       {/* Responsive Grid Layout:
