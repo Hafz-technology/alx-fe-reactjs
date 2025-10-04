@@ -17,8 +17,19 @@ const AddRecipeForm = () => {
   const [successMessage, setSuccessMessage] = useState('');
 
   // Universal handler for form input changes
+
+
+
+
+
+
+
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const name = e.target.name;
+    const value = e.target.value
+
+    // const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value,
