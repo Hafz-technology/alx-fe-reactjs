@@ -1,7 +1,6 @@
-
 import './App.css'
 
-  import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
   const queryClient = new QueryClient();
 
@@ -14,6 +13,5 @@ import './App.css'
   }
 
 
-
-
 export default App
+
