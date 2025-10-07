@@ -97,3 +97,20 @@ describe('TodoList Component', () => {
 
 
 // Checks for the implementation of the testing component
+
+
+// > react-todo@0.0.0 test
+// > jest
+
+// PASS src/__tests__/TodoList.test.js
+//   TodoList Component
+//     ✓ renders the TodoList component and initial todos (30 ms)
+//     ✓ allows a user to add a new todo item (10 ms)
+//     ✓ allows a user to toggle a todo item completion status (5 ms)
+//     ✓ allows a user to delete a todo item (15 ms)
+
+// Test Suites: 1 passed, 1 total
+// Tests:       4 passed, 4 total
+// Snapshots:   0 total
+// Time:        1.500 s
+// Ran all test suites.
