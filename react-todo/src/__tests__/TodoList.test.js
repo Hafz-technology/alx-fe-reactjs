@@ -94,3 +94,6 @@ describe('TodoList Component', () => {
     });
   });
 });
+
+
+// Checks for the implementation of the testing component
