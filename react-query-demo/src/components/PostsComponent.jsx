@@ -5,33 +5,50 @@ import { useQuery } from '@tanstack/react-query';
 const fetchPosts = async () => {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
   if (!response.ok) {
-    // You could simulate an error here: throw new Error('Forced Error Demonstration');
     throw new Error('Network response was not ok');
   }
   return response.json();
 };
 
 const PostsComponent = () => {
-  // Destructure the useQuery results, explicitly including isError and isRefetching
+  // Destructure the useQuery results
   const {
-    data: posts,          // The fetched data
-    isLoading,         // Boolean: is the query currently fetching for the very first time?
-    isError,           // Boolean: did the query fail? (Better than just checking if 'error' exists)
-    error,             // The error object if the query failed
-    isFetching,        // Boolean: is the query currently fetching (initial, background, or manual)?
-    isRefetching,      // Boolean: is the query refetching in the background/manually?
-    refetch,           // Function to manually trigger a refetch
+    data: posts,
+    isLoading,
+    isError,
+    error,
+    isRefetching,
+    refetch,
+    // Note: isFetching will be true for any fetch, including initial load
   } = useQuery({
     queryKey: ['posts'], // Unique key for caching this query
     queryFn: fetchPosts, // The function to execute
+    
+    // --- Local Configuration for Advanced Features ---
+    
+    // 1. staleTime: How long data stays 'fresh'. 
+    //    If fresh (e.g., 30s), component re-mounts will NOT trigger a background fetch.
+    staleTime: 1000 * 30, // Local override: data is fresh for 30 seconds
+    
+    // 2. cacheTime: How long inactive/unused data is kept in the cache before garbage collection.
+    //    Should usually be longer than staleTime.
+    cacheTime: 1000 * 60 * 5, // Local override: garbage collect after 5 minutes of inactivity
+
+    // 3. refetchOnWindowFocus: Automatically refetch when the browser window regains focus.
+    refetchOnWindowFocus: true, // Boolean: Re-fetches data when the user focuses the window
+
+    // 4. keepPreviousData: While fetching new data, the component continues to show the old data.
+    //    (Useful mainly for pagination/filters, but demonstrated here)
+    //    *Note: In v5, this is named 'placeholderData'*
+    keepPreviousData: false, // Keep the old data displayed while fetching new data
+
+    // --------------------------------------------------
   });
 
   if (isLoading) {
-    // Only shows on the very first mount fetch
     return <div className="loading-state">Loading posts for the first time... ⏳</div>;
   }
 
-  // Use the explicit isError boolean for robust error handling
   if (isError) {
     return <div className="error-state">An error occurred: {error.message} 🛑 Please try again later.</div>;
   }
@@ -42,7 +59,7 @@ const PostsComponent = () => {
         Fetched Posts ({posts.length}) {isRefetching ? '(Updating...)' : ''}
       </h2>
 
-      {/* Step 3: Refetch Button Implementation */}
+      {/* Manual Refetch Button */}
       <button 
         onClick={() => refetch()} 
         disabled={isRefetching}
@@ -51,10 +68,15 @@ const PostsComponent = () => {
         {isRefetching ? 'Refetching...' : 'Manually Refetch Data 🔄'}
       </button>
 
-      {/* Caching Explanation */}
-      <p style={{ fontSize: '0.9em', color: '#555', borderLeft: '3px solid #007bff', paddingLeft: '10px' }}>
-        **Caching Demonstration:** When the component re-mounts, data loads instantly from the cache. A network request (background refetch) only occurs if the data is considered **stale** (passed the configured time). Watch the network tab!
-      </p>
+      {/* Explanation of Local Configuration */}
+      <div style={{ fontSize: '0.9em', color: '#555', border: '1px solid #ddd', padding: '10px', marginBottom: '15px' }}>
+        **Advanced React Query Options (Local Overrides):**
+        <ul>
+          <li>**`staleTime`**: Data is fresh for 30s.</li>
+          <li>**`cacheTime`**: Inactive data is removed after 5 mins.</li>
+          <li>**`refetchOnWindowFocus`**: Set to **`true`**; try clicking out and back into the window!</li>
+        </ul>
+      </div>
 
       {/* Data Display */}
       <ul style={{ listStyleType: 'none', padding: 0 }}>
@@ -71,4 +93,5 @@ const PostsComponent = () => {
 };
 
 export default PostsComponent;
+
 
