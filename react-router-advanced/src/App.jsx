@@ -3,9 +3,9 @@ import Layout from './components/Layout';
 import ProtectedRoute from './components/ProtectedRoute'; 
 import Home from './pages/Home';
 import About from './pages/About';
-import Profile from './pages/Profile'; // Nested Parent
-import ProfileDetails from './pages/ProfileDetails'; 
-import ProfileSettings from './pages/ProfileSettings'; 
+import Profile from './components/Profile'; // Nested Parent
+import ProfileDetails from './components/ProfileDetails'; 
+import ProfileSettings from './components/ProfileSettings'; 
 import Post from './pages/Post'; 
 
 const App = () => {
@@ -46,4 +46,6 @@ const App = () => {
 
 export default App;
 
+
+//  ["/blog/:id", "BlogPost"]
 
